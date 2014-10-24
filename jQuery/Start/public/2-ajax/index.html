@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul data-content class="nav nav-pills">
+             
+                </ul>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="row">
+            <div class="col-md-12">
+                <div id="content"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    
+    <!-- Pub sub -->
+    <script src="js/pubSub.js"></script>
+
+    <!-- Subscribers -->
+    <script src="js/navigation.js"></script>
+    <script src="js/content.js"></script>
+    
+    <!-- Publishers -->
+    <script src="js/dataContext.js"></script>
+    
+    <script>
+        console.log(RD);
+    </script>
+
+</body>
+</html>

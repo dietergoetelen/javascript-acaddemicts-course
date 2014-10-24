@@ -1,0 +1,31 @@
+extends layout
+
+block content
+
+	div.row
+		div.col-md-8.col-md-offset-2
+			h1(data-todo-title)= title
+			
+			if errorMessage
+				.alert.alert-info #{errorMessage}
+			
+			ul.list-group(data-todo-container)
+				li.list-group-item
+					form(action="/add", method="post")
+						.input-group
+							input.form-control(placeholder="Add new todo", name="title", type="text", data-todo-input)
+							span.input-group-btn
+								input.btn-default.btn(type="submit", value="add", data-todo-new)
+				
+				each todo in todos
+					include ./partials/todo.jade
+						
+			table.table.table-bordered
+				tr
+					td.col-md-4 
+						a(href='/all', data-nav-status="all") All
+					td.col-md-4
+						a(href='/active', data-nav-status="active") Active
+					td.col-md-4
+						a(href='/completed', data-nav-status="completed") Completed
+
